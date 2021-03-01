@@ -41,7 +41,7 @@ ${tweet.text}
             await lim()
             await retry(async () => bot.sendMediaGroup(channelID, mediaGroup), {
                 retries: retryTimes
-            }).catch(e => consola.warning(`${tweet.id} send failed after 5 retries`))
+            }).catch(e => consola.error(`${tweet.id} send failed after 5 retries`))
             continue
         }
 
@@ -50,7 +50,7 @@ ${tweet.text}
             parse_mode: 'html'
         }), {
             retries: retryTimes
-        }).catch(e => consola.warning(`${tweet.id} send failed after 5 retries`))
+        }).catch(e => consola.error(`${tweet.id} send failed after 5 retries`))
     }
 
     return messages
