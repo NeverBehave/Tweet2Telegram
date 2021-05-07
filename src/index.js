@@ -39,7 +39,19 @@ ${tweet.text}
             consola.info('build message: ', mediaGroup)
 
             await lim()
-            await retry(async () => bot.sendMediaGroup(channelID, mediaGroup), {
+            await retry(async (err, num) => {
+                if (num > 1) {
+                    // This should be at least the second attmept
+                    // We need to use a different URL to invalid the Telegram Cache
+                    mediaGroup = mediaGroup.map(e => {
+                        return {
+                            ...e,
+                            media: `${e.media}&${num}`
+                        }
+                    })
+                }
+                return bot.sendMediaGroup(channelID, mediaGroup)
+            }, {
                 retries: retryTimes
             }).catch(e => consola.error(`${tweet.id} send failed after 5 retries`))
             continue
