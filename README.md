@@ -36,6 +36,7 @@
     - [@Botfather](https://t.me/botfather)
     - 获取频道ID, 转发一条频道消息到[@JSONDumpBot](https://t.me/JSONDumpBot)
     - `CHANNELBOT`变量对应的是`BOT_TOKEN`
+- GIST_TOKEN 为 [GitHub token](https://github.com/settings/tokens) 需要把相应的选项勾上
 
 ## Adjustment
 
