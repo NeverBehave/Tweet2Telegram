@@ -46,6 +46,7 @@
     - 真的真的不会有人一口气搞那么多吧
     - 不够用就加快频率吧
 - repository_dispatch: `type: fetchLikes`
+- workflow_dispatch: 手动触发或 `API` 触发
 
 ## Demo
 
