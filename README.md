@@ -47,6 +47,7 @@ Telegram 的导出功能也比 Twitter 舒服
     - 真的真的不会有人一口气搞那么多吧
     - 不够用就加快频率吧
 - repository_dispatch: `type: fetchLikes`
+- workflow_dispatch: 手动触发或使用 [RESTFUL API](https://docs.github.com/en/rest/reference/actions#create-a-workflow-dispatch-event) 触发，可以配合 iOS 捷径在推特客户端开启/关闭时调用，节约资源
 
 ## Demo
 
